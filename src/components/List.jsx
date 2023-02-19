@@ -2,9 +2,8 @@ import React,{Suspense, useEffect, useState} from "react";
 import { getDatabase, ref, child, get, orderByChild ,query  } from "firebase/database";
 import {Link,Routes,Route,Redirect} from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
-import Table from 'react-bootstrap/Table';
 import Detail from './Detail';
-
+import Paging from './Paging'
 
 import Firebase from "./Firebase";
 
@@ -63,8 +62,9 @@ function List(name) {
         //console.log(postsList);
         })
         postsList = postsList.reverse(); //저장된 데이터는 번호 때문에 오름차순으로 저장되어 있어 반대로 바꿔서 출력
-
         
+        //리스트를 페이지 네이션을 이용해서 분할한다
+
 
         return(
             <> 
@@ -74,19 +74,7 @@ function List(name) {
                 <Routes>
                     {routeList}
                 </Routes>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th><center><small>번호</small></center></th>
-                            <th><center><small>제목</small></center></th>
-                            <th><center><small>날짜</small></center></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {postsList}
-                    </tbody>
-                </Table>
-
+                <Paging list={postsList}/>
                 
                 
             </>)

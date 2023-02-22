@@ -3,6 +3,7 @@ import Search from "./Search"
 import { BrowserRouter, Routes , Route, Link} from "react-router-dom";
 import List from './List';
 import Bookmark from "./Bookmark";
+import Scrap from "./Scrap";
 
 function Main() {
 
@@ -21,7 +22,14 @@ function Main() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<><Search/> <Bookmark/></>}></Route>
+                <Route path="/" element={
+                    <>
+                    <Search/> 
+                    <Bookmark/> 
+                    <br/> 
+                    <Scrap/>
+                    </>}>
+                </Route>
                 {uDepartmentList}
             </Routes>
             

@@ -4,7 +4,8 @@ import {Link,Routes,Route,Redirect} from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
 import Detail from './Detail';
 import Paging from './Paging'
-
+import BookmarkBtn from './BookmarkBtn';
+import ScrapBtn from'./ScrapBtn';
 import Firebase from "./Firebase";
 
 //console.log("data",data);
@@ -57,7 +58,7 @@ function List(name) {
                 </tr>)
                 //console.log(name.props+"/"+element[0])
             routeList.push(
-                <Route key = {id} path={element[0]} element={<Detail text={post[0][1]} title = {post[2][1]} date = {post[1][1]}/> }/>
+                <Route key = {id} path={element[0]} element={<><Detail text={post[0][1]} title = {post[2][1]} date = {post[1][1]} link = {name.props + '/'+element[0]}/></>}/>
             )
         //console.log(postsList);
         })
@@ -69,7 +70,8 @@ function List(name) {
         return(
             <> 
                 &nbsp;
-                <h3 style={{ textAlign: "center" , color:"gray"}}>{name.props} 공지사항</h3>
+                <h3 style={{ textAlign: "center" , color:"gray"}}>{name.props} 공지사항 <BookmarkBtn name={name.props}/> </h3>
+                
                 <hr/>
                 <Routes>
                     {routeList}

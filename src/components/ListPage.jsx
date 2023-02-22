@@ -6,10 +6,11 @@ function ListPage(props) {
     
     //10개씩 보여주고 num에 따라서 몇번째인지 결정된다
     //[0:10][10:20][20:]
+    
     let dataList =[];
     let data = Math.floor(long/10);
     let rData = long % 10;
-    if (rData) {
+    if (rData != 0) {
         let t = 10;
         for (var i =0; i<data;i++) {
             dataList.push(t);
@@ -23,12 +24,14 @@ function ListPage(props) {
             t = t+10;
         }
     }
+
     var a = dataList[props.number-1];
-    let list = props.list.slice(a-rData, a );
+    let list = props.list.slice(a-10, a );
+
     
 
     return (
-        <Table striped bordered hover>
+        <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
                             <th><center><small>번호</small></center></th>

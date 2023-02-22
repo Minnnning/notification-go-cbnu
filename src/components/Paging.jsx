@@ -9,10 +9,10 @@ const Paging = (props) => {
   const handlePageChange = (page) => {
     setPage(page);
   };
-  //console.log(props.list.length);
+  console.log(props.list.length);
   return (
     <>
-      <ListPage list = {props.list} number={page}/>
+      <ListPage list = {props.list} number={page} />
       <Pagination
         activePage={page}
         itemsCountPerPage={10}

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes , Route, Link} from "react-router-dom";
 import List from './List';
 import Bookmark from "./Bookmark";
 import Scrap from "./Scrap";
+import ScrollToTop from "./ScrollToTop";
 
 function Main() {
 
@@ -21,12 +22,12 @@ function Main() {
 
     return (
         <>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={
                     <>
-                    <Search/> 
+                    <Search list={uDepartment}/> 
                     <Bookmark/> 
-                    <br/> 
                     <Scrap/>
                     </>}>
                 </Route>

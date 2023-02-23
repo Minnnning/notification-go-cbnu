@@ -3,7 +3,8 @@ import { getDatabase, ref, child, get, orderByChild ,query  } from "firebase/dat
 import {Link,Routes,Route,Redirect} from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
 import Detail from './Detail';
-import Paging from './Paging'
+import Paging from './Paging';
+import ScrollToTop from "./ScrollToTop";
 import BookmarkBtn from './BookmarkBtn';
 import ScrapBtn from'./ScrapBtn';
 import Firebase from "./Firebase";
@@ -70,7 +71,7 @@ function List(name) {
         return(
             <> 
                 &nbsp;
-                <h3 style={{ textAlign: "center" , color:"gray"}}>{name.props} 공지사항 <BookmarkBtn name={name.props}/> </h3>
+                <h4 style={{ textAlign: "center" , color:"gray"}}>{name.props} 공지사항 <BookmarkBtn name={name.props}/> </h4>
                 
                 <hr/>
                 <Routes>

@@ -1,5 +1,6 @@
 import React from "react";
 import Table from 'react-bootstrap/Table';
+import Badge from 'react-bootstrap/Badge';
 import { useCookies, Cookies } from 'react-cookie';
 import {Link} from 'react-router-dom'
 
@@ -18,7 +19,7 @@ function Scrap() {
         <Table striped bordered hover size="sm">
         <thead>
             <tr>
-            스크랩 리스트
+            <h6><Badge  className="d-grid gap-2" bg="secondary">스크랩 리스트</Badge></h6>       
             </tr>
         </thead>
         <tbody>

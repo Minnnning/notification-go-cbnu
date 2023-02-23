@@ -9,13 +9,13 @@ function App() {
       <div style={{ marginLeft: "20%", marginRight: "20%" }}>
         <BrowserRouter>
           <div style={{ textAlign: "center", marginTop: "5px" }}>
-            <Badge pill bg="secondary">
-              <Link to="/" style={{ textDecoration: "none" }}>
-                <strong style={{ fontSize: "3rem", color: "white" }}>
-                  충북대 공지고
-                </strong>
-              </Link>
-            </Badge>
+            <h1>
+              <Badge pill bg="secondary">
+                <Link to="/" style={{ textDecoration: "none" }}>
+                  <strong style={{ color: "white" }}>충북대 공지고</strong>
+                </Link>
+              </Badge>
+            </h1>
           </div>
 
           <Main />

@@ -1,27 +1,33 @@
 import React from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import Table from 'react-bootstrap/Table';
+import Badge from 'react-bootstrap/Badge';
 import { useCookies, Cookies } from 'react-cookie';
-import Container from 'react-bootstrap/Container';
+import {Link} from 'react-router-dom'
+
 
 function Bookmark() {
     const [cookies] = useCookies()
     if (cookies.bookmark) {
         var markList =[]
         cookies.bookmark.map((element,id)=>{
-            markList.push(<Dropdown.Item  eventKey={id} href={element} >{element}</Dropdown.Item>)
+            markList.push(<tr key ={id}><td><Link to={element} style={{ textDecoration: "none" }} >{element}</Link></td></tr>)
            
         })
     } else {
-        var markList = <Dropdown.Item  disabled ='true' >Noting</Dropdown.Item>;
+        var markList =<tr><td>즐겨찾기가 없습니다.</td></tr>;
     }
 
     return(
-        
-        <DropdownButton className="d-grid gap-2" variant='secondary' size="sm" id="dropdown-basic-button" title="즐겨찾기">
-            {markList}
-        </DropdownButton>       
-        
+        <Table striped bordered hover size="sm">
+            <thead>
+                <tr>
+                <h6><Badge  className="d-grid gap-2" bg="secondary">즐겨찾기 리스트 ★</Badge></h6>
+                </tr>
+            </thead>
+            <tbody>
+                {markList}
+            </tbody>
+        </Table>
     );
 }
 export default Bookmark;

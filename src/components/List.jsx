@@ -1,12 +1,11 @@
-import React,{Suspense, useEffect, useState} from "react";
-import { getDatabase, ref, child, get, orderByChild ,query  } from "firebase/database";
-import {Link,Routes,Route,Redirect} from "react-router-dom";
+import React,{useEffect, useState} from "react";
+import { getDatabase, ref, child, get } from "firebase/database";
+import {Link,Routes,Route } from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
 import Detail from './Detail';
 import Paging from './Paging';
-import ScrollToTop from "./ScrollToTop";
 import BookmarkBtn from './BookmarkBtn';
-import ScrapBtn from'./ScrapBtn';
+
 import Firebase from "./Firebase";
 
 //console.log("data",data);

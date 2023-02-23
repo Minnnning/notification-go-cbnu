@@ -2,11 +2,12 @@ import React from "react";
 import Main from "./components/Main";
 import Badge from "react-bootstrap/Badge";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <div style={{ marginLeft: "20%", marginRight: "20%" }}>
+      <div class="media">
         <BrowserRouter>
           <div style={{ textAlign: "center", marginTop: "5px" }}>
             <h1>

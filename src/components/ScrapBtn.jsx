@@ -28,9 +28,9 @@ function ScrapBtn(props) { //제목title + 주소link 를 받는다
             if (cookies.scrap) {
                 var scrapList = cookies.scrap;
                 scrapList.push([props.title,props.link]);
-                setCookie('scrap',scrapList,{maxAge: 2000});
+                setCookie('scrap',scrapList,{maxAge: 100000} );
             } else {
-                setCookie('scrap',[ [props.title,props.link] ],{maxAge: 2000});
+                setCookie('scrap',[ [props.title,props.link] ],{maxAge: 100000});
             }
             setResult(true);
 
@@ -49,7 +49,7 @@ function ScrapBtn(props) { //제목title + 주소link 를 받는다
             if (filtered.length == 0) {
                 removeCookie('scrap');
             } else {
-                setCookie('scrap',filtered,{maxAge: 2000});
+                setCookie('scrap',filtered,{maxAge: 1000000});
             }
             setResult(false);
         }

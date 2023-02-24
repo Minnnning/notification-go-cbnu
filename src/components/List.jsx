@@ -58,7 +58,7 @@ function List(name) {
                 </tr>)
                 //console.log(name.props+"/"+element[0])
             routeList.push(
-                <Route key = {id} path={element[0]} element={<><Detail text={post[0][1]} title = {post[2][1]} date = {post[1][1]} link = {name.props + '/'+element[0]}/></>}/>
+                <Route key = {id} path={element[0]} element={<Detail text={post[0][1]} title = {post[2][1]} date = {post[1][1]} link = {name.props + '/'+element[0]} url = {post[3][1]}/>}/>
             )
         //console.log(postsList);
         })

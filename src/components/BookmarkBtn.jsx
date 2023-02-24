@@ -22,9 +22,9 @@ function BookmarkBtn(props) { //학과이름을 props로 받는다
             if (cookies.bookmark) {
                 var bookList = cookies.bookmark;
                 bookList.push(props.name);
-                setCookie('bookmark',bookList,{maxAge: 2000});
+                setCookie('bookmark',bookList,{maxAge: 10000});
             } else {
-                setCookie('bookmark',[props.name],{maxAge: 2000});
+                setCookie('bookmark',[props.name],{maxAge: 10000});
             }
             setResult(true);
 
@@ -36,7 +36,7 @@ function BookmarkBtn(props) { //학과이름을 props로 받는다
             if (filtered.length == 0) {
                 removeCookie('bookmark');
             } else {
-                setCookie('bookmark',filtered,{maxAge: 2000});
+                setCookie('bookmark',filtered,{maxAge: 10000});
             }
             setResult(false);
         }

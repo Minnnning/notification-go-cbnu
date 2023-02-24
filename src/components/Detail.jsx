@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import parse from 'html-react-parser';
 import ScrapBtn from "./ScrapBtn";
+import OriBtn from './OriBtn';
 import '../App.css';
 
 function Detail(content) {
@@ -25,6 +26,7 @@ function Detail(content) {
                 &nbsp;
                 &nbsp;
                 <hr/>
+                <OriBtn url ={content.url}></OriBtn>
                 <ScrapBtn title={content.title} link = {content.link}></ScrapBtn>
             </Container>
             

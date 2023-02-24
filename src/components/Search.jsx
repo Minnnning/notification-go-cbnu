@@ -18,7 +18,14 @@ function Search(props) {
             searchList = props.list.filter(a => (a).includes(search));
             let searchListTag =[];
             searchList.map((element,id)=>{
-                searchListTag.push(<h6><Button className="d-grid gap-2" size='sm' variant="outline-secondary" key={id} href={element}>{element}</Button></h6>)
+                searchListTag.push(
+                <h6 >
+                    <Link to={element} style={{ textDecoration: "none" }} className="d-grid gap-2" >
+                    <Button size='sm' variant="outline-secondary" key={id} >
+                    {element}
+                    </Button>
+                    </Link>
+                </h6>)
             })
             setResult(searchListTag);
             

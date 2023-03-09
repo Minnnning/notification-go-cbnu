@@ -9,8 +9,8 @@ function Search(props) {
     const [result,setResult] = useState(null);
     let [search, setSearch] = useState("");
     const onChange = (e) => {
-        setSearch(e.target.value)
-        search = e.target.value;
+        setSearch(e.target.value.toUpperCase())
+        search = e.target.value.toUpperCase();
         // console.log('search1',search1)
         let searchList = [];
 

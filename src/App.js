@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "./components/Main";
 import Badge from "react-bootstrap/Badge";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import "./App.css";
 
 function App() {

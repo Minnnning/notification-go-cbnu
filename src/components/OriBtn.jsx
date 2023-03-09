@@ -2,14 +2,17 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 
 function OriBtn(props) { 
+
+  function goToURL() {
+    window.open(props.url);
+  }
+
     return (
-      <div >
-          <a href={props.url} target="_blank" className="d-grid gap-2" style={{textDecoration: 'none'}}>
-            <Button variant="light" size="sm">
-              원본으로 가기
-            </Button>
-          </a>
-          <br/>
+      <div className="d-grid gap-2"> 
+        <Button type="button" variant="light" size="sm" onClick={goToURL}>
+          원문 이동
+        </Button>
+        <br/>
       </div>
 
     )

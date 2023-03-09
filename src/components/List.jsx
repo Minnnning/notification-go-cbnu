@@ -17,14 +17,16 @@ function List(name) {
     useEffect(() => {
         get(child(dbRef, name.props)).then((snapshot) => {
             if (snapshot.exists()) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                 setPosts(Object.entries(snapshot.val()));
                 //JSON.stringify(snapshot.val())
             } else {
                 console.log("No data available");
+                
             }
             }).catch((error) => {
                 console.error(error);
+                
             });
     },[])
     if (posts == null) {

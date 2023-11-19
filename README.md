@@ -12,8 +12,11 @@
 
 <img width="786" alt="image" src="https://user-images.githubusercontent.com/80758613/218243517-b64fc273-ee0f-4308-a73e-9822157ac6d8.png">
 &nbsp;
+<img width="1262" alt="스크린샷 2023-11-19 오후 9 59 26" src="https://github.com/Minnnning/notification-go-cbnu/assets/80758613/db2ac628-ec12-4f9a-9581-eadcd7060071">
+<img width="1290" alt="스크린샷 2023-11-19 오후 10 00 46" src="https://github.com/Minnnning/notification-go-cbnu/assets/80758613/b7cdb148-68c0-4af5-9c47-e5160ba3bce2">
 <br/>
 2023-02-23 파이어베이스 호스팅 연결<br/>
 
 2023-02-24 카카오톡 링크 공유시 연관 검색어로 들어가면 404페이지 오류 -> 해결<br/>
+
 
